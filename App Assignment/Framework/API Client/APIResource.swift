@@ -18,7 +18,7 @@ protocol APIResource {
     
     var parameters: JSONDictionary { get }
     
-    func makeModel(from json: JSONDictionary) -> ResponseModel
+    func makeModel(from json: AnyObject) -> ResponseModel
     
 }
 

@@ -21,35 +21,61 @@ class APIClientImplementation: APIClient {
         
         let url = "\(resource.urlString)\(resource.methodName)"
         
-        Alamofire
-            .request(url,
-                     method: .get,
-                     parameters: resource.parameters,
-                     encoding: JSONEncoding.default,
-                     headers: nil)
-            .validate()
+        Alamofire.request(url)
             .responseJSON { response in
+                // check for errors
+                guard response.result.error == nil else {
+                    // got an error in getting the data, need to handle it
+                    print("error calling GET on /todos/1")
+                    print(response.result.error!)
+                    completionHandler(Result.failure(response.result.error!))
+                    return
+                }
                 
-                guard response.result.isSuccess else {
-                    
-                    if let error = response.error {
-                        
-                        print("Alamofire Error: \(error.localizedDescription)")
+                // make sure we got some JSON since that's what we expect
+                guard (response.result.value as? AnyObject) != nil else {
+                    print("didn't get todo object as JSON from API")
+                    if let error = response.result.error {
                         completionHandler(Result.failure(error))
                     }
                     return
                 }
                 
-                if let jsonDictionary = response.result.value as? JSONDictionary {
-                    
-                    print("Response: \(jsonDictionary as AnyObject)")
-
-                    let responseModel = resource.makeModel(from: jsonDictionary)
-                    
-                    completionHandler(Result.success(responseModel))
-                }
+                let responseModel = resource.makeModel(from: response.result.value as AnyObject)
+                completionHandler(Result.success(responseModel))
                 
         }
+        
+       
+//        Alamofire
+//            .request(url,
+//                     method: .get,
+//                     parameters: resource.parameters,
+//                     encoding: JSONEncoding.default,
+//                     headers: nil)
+//            .validate()
+//            .responseJSON { response in
+//
+//                guard response.result.isSuccess else {
+//
+//                    if let error = response.error {
+//
+//                        print("Alamofire Error: \(error.localizedDescription)")
+//                        completionHandler(Result.failure(error))
+//                    }
+//                    return
+//                }
+//
+//                if let jsonDictionary = response.result.value as? JSONDictionary {
+//
+//                    print("Response: \(jsonDictionary as AnyObject)")
+//
+//                    let responseModel = resource.makeModel(from: jsonDictionary)
+//
+//                    completionHandler(Result.success(responseModel))
+//                }
+//
+//        }
     }
 
 }

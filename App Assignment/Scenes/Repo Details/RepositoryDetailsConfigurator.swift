@@ -27,7 +27,8 @@ class RepositoryDetailsConfigurator: RepositoryDetailsConfigurable {
         
         let presenter = RepositoryDetailsPresenter(
             output: viewController,
-            router: router
+            router: router,
+            repository: repository
         )
         
         viewController.presenter = presenter

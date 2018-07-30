@@ -16,8 +16,17 @@ struct GetReposListService: APIResource {
     }
     
     
-    func makeModel(from json: JSONDictionary) -> [Repository] {
+    func makeModel(from json: AnyObject) -> [Repository] {
         var repositories: [Repository] = []
+        let repoArray = json as? [JSONDictionary] ?? []
+        
+        for repo in repoArray{
+            var repository = Repository()
+            repository.name = repo["name"] as? String ?? ""
+            repository.forksCount = repo["forks_count"] as? Int ?? 0
+            repository.watchersCount = repo["watchers_count"] as? Int ?? 0
+            repositories.append(repository)
+        }
         
         return repositories
     }

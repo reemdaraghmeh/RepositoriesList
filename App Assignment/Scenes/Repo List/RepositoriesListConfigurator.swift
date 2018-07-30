@@ -17,11 +17,16 @@ class RepositoriesListConfigurator: RepositoriesListConfigurable {
     //MARK: RepositoriesListConfigurable
     func configure(viewController: RepositoriesListViewController) {
     
+        let apiClient = APIClientImplementation()
+        
+        let gateway = ReposGatewayImplementation(apiClient: apiClient)
+        
         let router = RepositoriesListRouter(viewController: viewController)
         
         let presenter = RepositoriesListPresenter(
             output: viewController,
-            router: router
+            router: router,
+            gateway: gateway
         )
         
         viewController.presenter = presenter

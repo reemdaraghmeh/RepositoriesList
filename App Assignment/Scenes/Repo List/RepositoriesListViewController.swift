@@ -41,6 +41,10 @@ extension RepositoriesListViewController: RepositoriesListPresenterOutput {
     func displayScreen(title: String) {
         self.title = title
     }
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
 }
 
 //MARK: UITableViewDataSource

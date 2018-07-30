@@ -18,6 +18,7 @@ protocol RepositoriesListPresenterInput: BasePresenterInput {
 
 protocol RepositoriesListPresenterOutput {
     func displayScreen(title: String)
+    func reloadData()
 }
 
 class RepositoriesListPresenter:  RepositoriesListPresenterInput {
@@ -28,18 +29,22 @@ class RepositoriesListPresenter:  RepositoriesListPresenterInput {
     
     //MARK: Properties
     var repoList: [Repository] = []
+    let gateway: ReposGateway
     
     //MARK: LifeCycle 
     init(output: RepositoriesListPresenterOutput,
-         router: RepositoriesListRoutable) {
+         router: RepositoriesListRoutable,
+         gateway: ReposGateway) {
         
         self.output = output
         self.router = router
+        self.gateway = gateway
     }
     
     //MARK: RepositoriesListPresenterInput
     func viewDidLoad() {
         output?.displayScreen(title: "Repositories List")
+        getRepoList()
     }
     
     //MARK: TableView Setup
@@ -49,11 +54,30 @@ class RepositoriesListPresenter:  RepositoriesListPresenterInput {
     
     func configure(cell: LabelCellOutput, for index: Int) {
         cell.setLabel(value: repoList[index].name)
+        cell.setAccessoryDisclosureIndicator()
     }
     
     //MARK: Actions
     func didSelectRowAt(index: Int) {
         router.navigateToRepoDetails(repoList[index])
+    }
+    
+    //MARK: API
+    func getRepoList(){
+        
+        let service = GetReposListService()
+        gateway.getReposList(service: service) { [weak self] result in
+            
+            switch result{
+                
+            case .success(let value):
+                self?.repoList = value
+                self?.output?.reloadData()
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 

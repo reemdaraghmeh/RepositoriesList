@@ -10,6 +10,8 @@ import UIKit
 
 protocol LabelCellOutput {
     func setLabel(value: String)
+    func setAccessoryDisclosureIndicator()
+    func setSelectionNone()
 }
 
 class LabelCell: UITableViewCell ,LabelCellOutput {
@@ -23,6 +25,14 @@ class LabelCell: UITableViewCell ,LabelCellOutput {
 
     func setLabel(value: String) {
         headerLabel.text = value
+    }
+    
+    func setAccessoryDisclosureIndicator() {
+        self.accessoryType = .disclosureIndicator
+    }
+    
+    func setSelectionNone() {
+        self.selectionStyle = .none
     }
     
 }
