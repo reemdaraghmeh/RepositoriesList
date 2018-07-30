@@ -14,6 +14,10 @@
 		87A2862E210E464A00561612 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A2862C210E464A00561612 /* LaunchScreen.storyboard */; };
 		87A2863F210EE27C00561612 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2863E210EE27C00561612 /* APIClient.swift */; };
 		87A28641210EE2A600561612 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28640210EE2A600561612 /* APIResource.swift */; };
+		87A28644210EEFD300561612 /* ReposGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28643210EEFD300561612 /* ReposGateway.swift */; };
+		87A28647210EF12200561612 /* GetReposListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28646210EF12200561612 /* GetReposListService.swift */; };
+		87A28649210EFAA000561612 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28648210EFAA000561612 /* Repository.swift */; };
+		87A2864B210F02A900561612 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2864A210F02A900561612 /* Contributor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		87A2862F210E464A00561612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87A2863E210EE27C00561612 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		87A28640210EE2A600561612 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		87A28643210EEFD300561612 /* ReposGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposGateway.swift; sourceTree = "<group>"; };
+		87A28646210EF12200561612 /* GetReposListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReposListService.swift; sourceTree = "<group>"; };
+		87A28648210EFAA000561612 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		87A2864A210F02A900561612 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		BB1F41A2C042A7F7CAFCD7F1 /* Pods-App Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App Assignment/Pods-App Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		BBC682D32B2A2C9761F229CE /* Pods_App_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +134,8 @@
 		87A2863A210E4D9400561612 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				87A28648210EFAA000561612 /* Repository.swift */,
+				87A2864A210F02A900561612 /* Contributor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +143,8 @@
 		87A2863B210E4DA200561612 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				87A28645210EF03700561612 /* Services */,
+				87A28642210EEFBD00561612 /* Gateways */,
 				87A2863D210EE26200561612 /* API Client */,
 			);
 			path = Framework;
@@ -152,6 +164,22 @@
 				87A28640210EE2A600561612 /* APIResource.swift */,
 			);
 			path = "API Client";
+			sourceTree = "<group>";
+		};
+		87A28642210EEFBD00561612 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				87A28643210EEFD300561612 /* ReposGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		87A28645210EF03700561612 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				87A28646210EF12200561612 /* GetReposListService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E4561BC038DF7F134BB9F67A /* Pods */ = {
@@ -275,9 +303,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A28644210EEFD300561612 /* ReposGateway.swift in Sources */,
+				87A28647210EF12200561612 /* GetReposListService.swift in Sources */,
+				87A2864B210F02A900561612 /* Contributor.swift in Sources */,
 				87A28624210E464800561612 /* AppDelegate.swift in Sources */,
 				87A28641210EE2A600561612 /* APIResource.swift in Sources */,
 				87A2863F210EE27C00561612 /* APIClient.swift in Sources */,
+				87A28649210EFAA000561612 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,7 @@ protocol APIResource {
 extension APIResource {
     
     var urlString: String {
-        return "https://api.github.com/users/romannurik/"//repos
+        return "https://api.github.com/users/romannurik/"
     }
     
     var parameters: JSONDictionary {
