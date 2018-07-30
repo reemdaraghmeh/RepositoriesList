@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		563888E3554727970110563E /* Pods_App_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC682D32B2A2C9761F229CE /* Pods_App_Assignment.framework */; };
+		87755B3E210F0EC3000F3734 /* RepositoryDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3A210F0EC3000F3734 /* RepositoryDetailsPresenter.swift */; };
+		87755B3F210F0EC3000F3734 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3B210F0EC3000F3734 /* RepositoryDetailsRouter.swift */; };
+		87755B40210F0EC3000F3734 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3C210F0EC3000F3734 /* RepositoryDetailsViewController.swift */; };
+		87755B41210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3D210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift */; };
 		87A28624210E464800561612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28623210E464800561612 /* AppDelegate.swift */; };
 		87A28629210E464800561612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A28627210E464800561612 /* Main.storyboard */; };
 		87A2862B210E464A00561612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2862A210E464A00561612 /* Assets.xcassets */; };
@@ -18,10 +22,21 @@
 		87A28647210EF12200561612 /* GetReposListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28646210EF12200561612 /* GetReposListService.swift */; };
 		87A28649210EFAA000561612 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28648210EFAA000561612 /* Repository.swift */; };
 		87A2864B210F02A900561612 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2864A210F02A900561612 /* Contributor.swift */; };
+		87A28651210F071100561612 /* RepositoriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2864D210F071100561612 /* RepositoriesListPresenter.swift */; };
+		87A28652210F071100561612 /* RepositoriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2864E210F071100561612 /* RepositoriesListRouter.swift */; };
+		87A28653210F071100561612 /* RepositoriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A2864F210F071100561612 /* RepositoriesListViewController.swift */; };
+		87A28654210F071100561612 /* RepositoriesListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28650210F071100561612 /* RepositoriesListConfigurator.swift */; };
+		87A28658210F078100561612 /* BasePresenterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28657210F078100561612 /* BasePresenterInput.swift */; };
+		87A2865B210F0A4600561612 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28659210F0A4600561612 /* LabelCell.swift */; };
+		87A2865C210F0A4600561612 /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87A2865A210F0A4600561612 /* LabelCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F025C14393FA7370CFDB47E /* Pods-App Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-App Assignment/Pods-App Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		87755B3A210F0EC3000F3734 /* RepositoryDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsPresenter.swift; sourceTree = "<group>"; };
+		87755B3B210F0EC3000F3734 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
+		87755B3C210F0EC3000F3734 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		87755B3D210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsConfigurator.swift; sourceTree = "<group>"; };
 		87A28620210E464800561612 /* App Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A28623210E464800561612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A28628210E464800561612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +49,13 @@
 		87A28646210EF12200561612 /* GetReposListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReposListService.swift; sourceTree = "<group>"; };
 		87A28648210EFAA000561612 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		87A2864A210F02A900561612 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
+		87A2864D210F071100561612 /* RepositoriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListPresenter.swift; sourceTree = "<group>"; };
+		87A2864E210F071100561612 /* RepositoriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListRouter.swift; sourceTree = "<group>"; };
+		87A2864F210F071100561612 /* RepositoriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListViewController.swift; sourceTree = "<group>"; };
+		87A28650210F071100561612 /* RepositoriesListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesListConfigurator.swift; sourceTree = "<group>"; };
+		87A28657210F078100561612 /* BasePresenterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterInput.swift; sourceTree = "<group>"; };
+		87A28659210F0A4600561612 /* LabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
+		87A2865A210F0A4600561612 /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
 		BB1F41A2C042A7F7CAFCD7F1 /* Pods-App Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App Assignment/Pods-App Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		BBC682D32B2A2C9761F229CE /* Pods_App_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -58,6 +80,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		87755B39210F0EAC000F3734 /* Repo Details */ = {
+			isa = PBXGroup;
+			children = (
+				87755B3A210F0EC3000F3734 /* RepositoryDetailsPresenter.swift */,
+				87755B3B210F0EC3000F3734 /* RepositoryDetailsRouter.swift */,
+				87755B3C210F0EC3000F3734 /* RepositoryDetailsViewController.swift */,
+				87755B3D210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift */,
+			);
+			path = "Repo Details";
+			sourceTree = "<group>";
+		};
 		87A28617210E464800561612 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +112,7 @@
 		87A28622210E464800561612 /* App Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				87A28655210F076500561612 /* Helpers */,
 				87A2863C210E4DAA00561612 /* Scenes */,
 				87A2863B210E4DA200561612 /* Framework */,
 				87A2863A210E4D9400561612 /* Models */,
@@ -127,6 +161,8 @@
 		87A28639210E4D4F00561612 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				87A28659210F0A4600561612 /* LabelCell.swift */,
+				87A2865A210F0A4600561612 /* LabelCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -153,6 +189,8 @@
 		87A2863C210E4DAA00561612 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				87755B39210F0EAC000F3734 /* Repo Details */,
+				87A2864C210F06F600561612 /* Repo List */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -180,6 +218,33 @@
 				87A28646210EF12200561612 /* GetReposListService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		87A2864C210F06F600561612 /* Repo List */ = {
+			isa = PBXGroup;
+			children = (
+				87A2864D210F071100561612 /* RepositoriesListPresenter.swift */,
+				87A2864E210F071100561612 /* RepositoriesListRouter.swift */,
+				87A2864F210F071100561612 /* RepositoriesListViewController.swift */,
+				87A28650210F071100561612 /* RepositoriesListConfigurator.swift */,
+			);
+			path = "Repo List";
+			sourceTree = "<group>";
+		};
+		87A28655210F076500561612 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				87A28656210F076A00561612 /* MVP Protocols */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		87A28656210F076A00561612 /* MVP Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				87A28657210F078100561612 /* BasePresenterInput.swift */,
+			);
+			path = "MVP Protocols";
 			sourceTree = "<group>";
 		};
 		E4561BC038DF7F134BB9F67A /* Pods */ = {
@@ -253,6 +318,7 @@
 			files = (
 				87A2862E210E464A00561612 /* LaunchScreen.storyboard in Resources */,
 				87A2862B210E464A00561612 /* Assets.xcassets in Resources */,
+				87A2865C210F0A4600561612 /* LabelCell.xib in Resources */,
 				87A28629210E464800561612 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,12 +369,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A28654210F071100561612 /* RepositoriesListConfigurator.swift in Sources */,
+				87A28653210F071100561612 /* RepositoriesListViewController.swift in Sources */,
 				87A28644210EEFD300561612 /* ReposGateway.swift in Sources */,
+				87755B41210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift in Sources */,
 				87A28647210EF12200561612 /* GetReposListService.swift in Sources */,
+				87A2865B210F0A4600561612 /* LabelCell.swift in Sources */,
+				87755B40210F0EC3000F3734 /* RepositoryDetailsViewController.swift in Sources */,
 				87A2864B210F02A900561612 /* Contributor.swift in Sources */,
+				87755B3E210F0EC3000F3734 /* RepositoryDetailsPresenter.swift in Sources */,
 				87A28624210E464800561612 /* AppDelegate.swift in Sources */,
+				87A28652210F071100561612 /* RepositoriesListRouter.swift in Sources */,
+				87755B3F210F0EC3000F3734 /* RepositoryDetailsRouter.swift in Sources */,
 				87A28641210EE2A600561612 /* APIResource.swift in Sources */,
 				87A2863F210EE27C00561612 /* APIClient.swift in Sources */,
+				87A28651210F071100561612 /* RepositoriesListPresenter.swift in Sources */,
+				87A28658210F078100561612 /* BasePresenterInput.swift in Sources */,
 				87A28649210EFAA000561612 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
