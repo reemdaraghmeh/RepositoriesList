@@ -11,10 +11,9 @@ import Foundation
 struct GetReposListService: APIResource {
     
     
-    var methodName: String{
-        return "repos"
+    var urlString: String{
+        return "https://api.github.com/users/romannurik/repos"
     }
-    
     
     func makeModel(from json: AnyObject) -> [Repository] {
         var repositories: [Repository] = []
@@ -25,6 +24,8 @@ struct GetReposListService: APIResource {
             repository.name = repo["name"] as? String ?? ""
             repository.forksCount = repo["forks_count"] as? Int ?? 0
             repository.watchersCount = repo["watchers_count"] as? Int ?? 0
+            repository.contributersURL = repo["contributors_url"] as? String ?? ""
+            
             repositories.append(repository)
         }
         

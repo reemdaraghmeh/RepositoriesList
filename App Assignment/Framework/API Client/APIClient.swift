@@ -8,20 +8,21 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 protocol APIClient {
     
     func request<Resource: APIResource>(resource: Resource, completionHandler: @escaping (Result<Resource.ResponseModel>) -> Void)
+    
+    func downloadImageFrom(urlString: String, completionHandler: @escaping (UIImage) -> Void)
 }
 
 class APIClientImplementation: APIClient {
 
     
     func request<Resource: APIResource>(resource: Resource, completionHandler: @escaping (Result<Resource.ResponseModel>) -> Void)  {
-        
-        let url = "\(resource.urlString)\(resource.methodName)"
-        
-        Alamofire.request(url)
+                
+        Alamofire.request(resource.urlString)
             .responseJSON { response in
 
                 guard response.result.error == nil else {
@@ -46,5 +47,18 @@ class APIClientImplementation: APIClient {
 
     }
 
+    
+    func downloadImageFrom(urlString: String, completionHandler: @escaping (UIImage) -> Void){
+        
+        Alamofire.request(urlString).responseImage { response in
+            
+            if let image = response.result.value {
+                completionHandler(image)
+            }else{
+                let defaultImage = UIImage(named: "avatar")
+                completionHandler(defaultImage!)
+            }
+        }
+    }
 }
 

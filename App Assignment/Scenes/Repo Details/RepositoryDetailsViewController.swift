@@ -29,6 +29,7 @@ class RepositoryDetailsViewController: UIViewController {
 
     func configureTableView(){
         tableView.register(UINib.init(nibName: "LabelCell", bundle: nil), forCellReuseIdentifier: "LabelCell")
+        tableView.register(UINib.init(nibName: "ContributorCell", bundle: nil), forCellReuseIdentifier: "ContributorCell")
         tableView.tableFooterView = UIView(frame: .zero)
     }
     
@@ -53,16 +54,27 @@ extension RepositoryDetailsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! LabelCell
-        presenter.configure(cell: cell, for: indexPath.section)
-        return cell
+        if indexPath.section == 3{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ContributorCell", for: indexPath) as! ContributorCell
+            presenter.configure(contributorCell: cell, index: indexPath.row)
+            return cell
+        }else{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! LabelCell
+            presenter.configure(cell: cell, for: indexPath.section)
+            return cell
+        }
+        
     }
 }
 
 extension RepositoryDetailsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        if indexPath.section == 3{
+            return 100
+        }else{
+            return 50
+        }
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

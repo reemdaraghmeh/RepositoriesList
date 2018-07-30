@@ -6,7 +6,7 @@ target 'App Assignment' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.5'
-
+  pod 'AlamofireImage', '~> 3.3'
 
   # Pods for App Assignment
 

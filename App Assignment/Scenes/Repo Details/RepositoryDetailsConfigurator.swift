@@ -23,12 +23,17 @@ class RepositoryDetailsConfigurator: RepositoryDetailsConfigurable {
     //MARK: RepositoryDetailsConfigurable
     func configure(viewController: RepositoryDetailsViewController) {
     
+        let apiClient = APIClientImplementation()
+        
+        let gateway = ReposGatewayImplementation(apiClient: apiClient)
+        
         let router = RepositoryDetailsRouter(viewController: viewController)
         
         let presenter = RepositoryDetailsPresenter(
             output: viewController,
             router: router,
-            repository: repository
+            repository: repository,
+            gateway: gateway
         )
         
         viewController.presenter = presenter

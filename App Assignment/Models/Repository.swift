@@ -13,5 +13,5 @@ struct Repository{
     var name = ""
     var forksCount = 0
     var watchersCount = 0
-    var contributers: [Contributor] = []
+    var contributersURL = ""
 }

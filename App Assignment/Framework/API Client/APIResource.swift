@@ -14,7 +14,7 @@ protocol APIResource {
     
     associatedtype ResponseModel
     
-    var methodName: String { get }
+    var urlString: String { get }
     
     var parameters: JSONDictionary { get }
     
@@ -23,10 +23,7 @@ protocol APIResource {
 }
 
 extension APIResource {
-    
-    var urlString: String {
-        return "https://api.github.com/users/romannurik/"
-    }
+
     
     var parameters: JSONDictionary {
         return [:]

@@ -12,6 +12,9 @@
 		87755B3F210F0EC3000F3734 /* RepositoryDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3B210F0EC3000F3734 /* RepositoryDetailsRouter.swift */; };
 		87755B40210F0EC3000F3734 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3C210F0EC3000F3734 /* RepositoryDetailsViewController.swift */; };
 		87755B41210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B3D210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift */; };
+		87755B4D210F463D000F3734 /* ContributorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B4B210F463D000F3734 /* ContributorCell.swift */; };
+		87755B4E210F463D000F3734 /* ContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87755B4C210F463D000F3734 /* ContributorCell.xib */; };
+		87755B50210F9F83000F3734 /* GetContributorsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B4F210F9F83000F3734 /* GetContributorsListService.swift */; };
 		87A28624210E464800561612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28623210E464800561612 /* AppDelegate.swift */; };
 		87A28629210E464800561612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A28627210E464800561612 /* Main.storyboard */; };
 		87A2862B210E464A00561612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2862A210E464A00561612 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 		87755B3B210F0EC3000F3734 /* RepositoryDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsRouter.swift; sourceTree = "<group>"; };
 		87755B3C210F0EC3000F3734 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
 		87755B3D210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsConfigurator.swift; sourceTree = "<group>"; };
+		87755B4B210F463D000F3734 /* ContributorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorCell.swift; sourceTree = "<group>"; };
+		87755B4C210F463D000F3734 /* ContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributorCell.xib; sourceTree = "<group>"; };
+		87755B4F210F9F83000F3734 /* GetContributorsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContributorsListService.swift; sourceTree = "<group>"; };
 		87A28620210E464800561612 /* App Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A28623210E464800561612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A28628210E464800561612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +169,8 @@
 			children = (
 				87A28659210F0A4600561612 /* LabelCell.swift */,
 				87A2865A210F0A4600561612 /* LabelCell.xib */,
+				87755B4B210F463D000F3734 /* ContributorCell.swift */,
+				87755B4C210F463D000F3734 /* ContributorCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				87A28646210EF12200561612 /* GetReposListService.swift */,
+				87755B4F210F9F83000F3734 /* GetContributorsListService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -317,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87A2862E210E464A00561612 /* LaunchScreen.storyboard in Resources */,
+				87755B4E210F463D000F3734 /* ContributorCell.xib in Resources */,
 				87A2862B210E464A00561612 /* Assets.xcassets in Resources */,
 				87A2865C210F0A4600561612 /* LabelCell.xib in Resources */,
 				87A28629210E464800561612 /* Main.storyboard in Resources */,
@@ -352,10 +362,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-App Assignment/Pods-App Assignment-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,6 +385,7 @@
 				87A28653210F071100561612 /* RepositoriesListViewController.swift in Sources */,
 				87A28644210EEFD300561612 /* ReposGateway.swift in Sources */,
 				87755B41210F0EC3000F3734 /* RepositoryDetailsConfigurator.swift in Sources */,
+				87755B50210F9F83000F3734 /* GetContributorsListService.swift in Sources */,
 				87A28647210EF12200561612 /* GetReposListService.swift in Sources */,
 				87A2865B210F0A4600561612 /* LabelCell.swift in Sources */,
 				87755B40210F0EC3000F3734 /* RepositoryDetailsViewController.swift in Sources */,
@@ -380,6 +393,7 @@
 				87755B3E210F0EC3000F3734 /* RepositoryDetailsPresenter.swift in Sources */,
 				87A28624210E464800561612 /* AppDelegate.swift in Sources */,
 				87A28652210F071100561612 /* RepositoriesListRouter.swift in Sources */,
+				87755B4D210F463D000F3734 /* ContributorCell.swift in Sources */,
 				87755B3F210F0EC3000F3734 /* RepositoryDetailsRouter.swift in Sources */,
 				87A28641210EE2A600561612 /* APIResource.swift in Sources */,
 				87A2863F210EE27C00561612 /* APIClient.swift in Sources */,

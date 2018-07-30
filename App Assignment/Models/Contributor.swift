@@ -10,11 +10,7 @@ import Foundation
 
 struct Contributor{
     
-    var loginID = ""
     var name = ""
     var imageURLString = ""
-    
-    var imageURL: URL{
-        return URL(string: imageURLString)!
-    }
+
 }
