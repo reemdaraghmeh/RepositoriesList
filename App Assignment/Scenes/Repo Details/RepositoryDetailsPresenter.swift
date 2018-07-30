@@ -28,7 +28,7 @@ class RepositoryDetailsPresenter:  RepositoryDetailsPresenterInput {
     private var output: RepositoryDetailsPresenterOutput?
     var router: RepositoryDetailsRoutable
     var repository: Repository
-    let headerTitles: [String] = ["Repository Name", "Number Of Forks", "Number Of Watchers", "Contributors"]
+    let headerTitles = ["Repository Name", "Number Of Forks", "Number Of Watchers", "Contributors"]
     
     //MARK: LifeCycle 
     init(output: RepositoryDetailsPresenterOutput,
