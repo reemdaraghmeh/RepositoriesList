@@ -18,7 +18,7 @@ struct GetContributorsListService: APIResource {
     
     func makeModel(from json: AnyObject) -> [Contributor] {
         var contributors: [Contributor] = []
-        let jsonArray = json as! [JSONDictionary]
+        let jsonArray = json as? [JSONDictionary] ?? []
         for contributorValue in jsonArray{
             var contributor = Contributor()
             contributor.name = contributorValue["login"] as? String ?? ""

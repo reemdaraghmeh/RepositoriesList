@@ -15,6 +15,7 @@
 		87755B4D210F463D000F3734 /* ContributorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B4B210F463D000F3734 /* ContributorCell.swift */; };
 		87755B4E210F463D000F3734 /* ContributorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 87755B4C210F463D000F3734 /* ContributorCell.xib */; };
 		87755B50210F9F83000F3734 /* GetContributorsListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B4F210F9F83000F3734 /* GetContributorsListService.swift */; };
+		87755B52210FAAC9000F3734 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87755B51210FAAC9000F3734 /* Constants.swift */; };
 		87A28624210E464800561612 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A28623210E464800561612 /* AppDelegate.swift */; };
 		87A28629210E464800561612 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87A28627210E464800561612 /* Main.storyboard */; };
 		87A2862B210E464A00561612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87A2862A210E464A00561612 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		87755B4B210F463D000F3734 /* ContributorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorCell.swift; sourceTree = "<group>"; };
 		87755B4C210F463D000F3734 /* ContributorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContributorCell.xib; sourceTree = "<group>"; };
 		87755B4F210F9F83000F3734 /* GetContributorsListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContributorsListService.swift; sourceTree = "<group>"; };
+		87755B51210FAAC9000F3734 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87A28620210E464800561612 /* App Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		87A28623210E464800561612 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87A28628210E464800561612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				87A28656210F076A00561612 /* MVP Protocols */,
+				87755B51210FAAC9000F3734 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				87755B4D210F463D000F3734 /* ContributorCell.swift in Sources */,
 				87755B3F210F0EC3000F3734 /* RepositoryDetailsRouter.swift in Sources */,
 				87A28641210EE2A600561612 /* APIResource.swift in Sources */,
+				87755B52210FAAC9000F3734 /* Constants.swift in Sources */,
 				87A2863F210EE27C00561612 /* APIClient.swift in Sources */,
 				87A28651210F071100561612 /* RepositoriesListPresenter.swift in Sources */,
 				87A28658210F078100561612 /* BasePresenterInput.swift in Sources */,
